@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-
+import imageInSrc  from './imageInSrc.jpg';
+import './style.css';
 function App() {
   return (
-    <form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" />
-    </div>
-    <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  );
+    <div>
+        <div style={{border: 'solid 1px black', maxWidth: '100vw'}}>
+          <h1 className="title red">Your name here</h1>
+          <br/>
+          <img src={imageInSrc} alt='imageInSrc' />
+          <br/>
+          <img src="/imageInPublic.jpg" alt='imageInPublic' />
+        </div>
+        <video width={320} height={240} controls>
+          <source src="myVideo.mp4" type="video/mp4" />
+        </video>
+      </div>
+  )
 }
 
 export default App;
